@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rennes Job Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="projet kaml.css" />
+</head>
+<body id="top">
+    
+    <nav class="bar">
+        <div class="nav-logo"><a href="#top"><img src="images/WhatsApp%20Image%202026-02-15%20at%2021.06.31.jpg" alt="Pearl Home"></a></div>
+        <div class="nav-links">
+            <a href="#work">Company</a>
+            <a href="#students">Students</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a> 
+        </div>
+        <!-- Sign In/Log In removed for GitHub Version as it requires PHP -->
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Rennes Job Service</h1>
+        <p>An association that helps students find student jobs.</p>
+        <div class="hero-image">
+            <!-- Ensure you upload this image to your images folder for GitHub -->
+            <a href="#"><img src="images/hero-image.png" alt="Rennes Job Service" onerror="this.style.display='none'"></a> 
+        </div>
+    </section>
+
+    <section class="form" id="work">
+        <h2>Job Application Form (Company)</h2>
+        <!-- Replace YOUR_FORMSPREE_ID with your actual ID from formspree.io -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <input type="hidden" name="subject" value="New Company Application">
+            
+            <label for="workLink">Work Link:</label>
+            <input type="text" id="workLink" name="workLink" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            
+            <label for="job">Job:</label>
+            <input type="text" id="job" name="job" required>
+            
+            <label for="description">Job Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <input type="submit" value="Send Application">
+        </form>
+    </section>
+
+    <section class="form" id="students">
+        <h2>Student Application Form</h2>
+        <!-- Replace YOUR_FORMSPREE_ID with your actual ID from formspree.io -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="subject" value="New Student Application">
+            
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" name="name" required>
+            
+            <label for="studentLastname">Last Name:</label>
+            <input type="text" id="studentLastname" name="lastname" required>
+            
+            <label for="studentDescription">Description:</label>
+            <textarea id="studentDescription" name="description" required></textarea>
+            
+            <label for="cv">CV Link (Google Drive/Dropbox):</label>
+            <!-- File uploads on static sites are tricky. It's better to ask for a link, or use Formspree Gold for uploads -->
+            <input type="text" id="cv" name="cv_link" placeholder="Paste link to your CV here" required>
+            
+            <input type="submit" value="Send Application">
+        </form>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>At Rennes Job Service, our mission is to revolutionize the way candidates and companies meet.</p>
+        <p>Based in Rennes, we specialize in recruitment and professional support, with the goal of helping our clients achieve their ambitions. Our team, composed of passionate and committed students, makes it a point of honor to understand the specific needs of the local market. Thanks to our personalized services, we offer quality solutions adapted to everyone's expectations. Whether you are a candidate looking for new opportunities or a company looking for talent, Rennes Job Service is your partner at every step of the process.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to contact us:</p>
+        <p>Contact us at: <a href="mailto:rennesjobservice@gmail.com">rennesjobservice@gmail.com</a></p>
+        <p>If you have any technical issues contact <a href="mailto:marouaneakhziz4@gmail.com">marouaneakhziz4@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/rennes-job-service/?originalSubdomain=fr" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/rennesjobservice/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom" style="justify-content: center; margin-top: 0; border: none;">
+            <p>Created by Marouane Akhziz</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling script (No PHP logic here)
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('a[href^="#"]');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var href = this.getAttribute('href');
+                    if (href !== "#" && href.startsWith("#")) {
+                        var target = document.querySelector(href);
+                        if (target) {
+                            window.scrollTo({
+                                top: target.offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
